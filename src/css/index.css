@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.active{
+    color: #e5004f
+    
+}
+.list {
+    width: 100%;
+    position: fixed;
+    bottom: 0.05rem;
+    height: 0.54rem;
+    font-size:0.24rem ;
+    line-height: 0.50rem;
+    text-align: center;
+    color: #666;
+}
+.list li{
+    width: 20%;
+    float: left;
+}
+.list span{
+    font-size:0.14rem; 
+    display: block;
+    line-height: 0rem;
+}
