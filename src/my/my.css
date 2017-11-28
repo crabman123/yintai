@@ -1,0 +1,122 @@
+#my{
+	font-size: 0.16rem;
+}
+#my #my_header{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	border-bottom: 1px solid #ccc;
+	color: #000;
+}
+
+#my #my_content{
+	width: 100%;
+	background: #eee;
+}
+#my #my_content .content_header{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	position: relative;
+	text-align: center;
+	font-weight: 500;
+	color: #aaa;
+	font-size: 0.14rem;
+	background: #fff;
+}
+
+#my #my_content .content_header span:nth-child(1){
+	display: inline-block;
+	width: 50%;
+	height: 40px;
+}
+#my #my_content .content_header span:nth-child(2){
+	position: absolute;
+	width: 2px;
+	height: 20px;
+	left: 50%;
+	top:10px;
+	margin-left: -1px;
+	background: #bbb;
+}
+#my #my_content .content_header span:nth-child(3){
+	display: inline-block;
+	width: 50%;
+	height: 40px;
+}
+
+.showBorderL{
+	border-bottom: 2px solid red;
+}
+.hideBorderL{
+	border:none;
+}
+#login{
+	width: 100%;
+	height: 300px;
+	text-align: center;
+	margin-top: 20px;
+}
+.showContentL{
+	display: block;
+	
+}
+.hideContentL{
+	display: none;
+}
+.showBorderR{
+	border-bottom: 2px solid red;
+}
+
+.hideBorderR{
+	border:none;
+}
+#regist{
+	width: 100%;
+	height: 300px;
+	text-align: center;
+	margin-top: 20px;
+}
+.showContentR{
+	display: block;
+}
+.hideContentR{
+	display: none;
+}
+
+#login input{
+	margin-top: 0.3rem;	
+	width: 100%;
+	border: none;
+	height: 40px;
+}
+
+#login button{
+	width: 80%;
+	background: red;
+	border-radius: 8px;
+	height: 0.5rem;
+	border: none;
+	font-size: 0.2rem;
+	color: #fff;
+}
+
+#regist input{
+	margin-top: 0.3rem;	
+	width: 100%;
+	border: none;
+	height: 40px;
+}
+
+#regist button{
+	width: 80%;
+	background: red;
+	border-radius: 8px;
+	height: 0.5rem;
+	border: none;
+	font-size: 0.2rem;
+	color: #fff;
+}
