@@ -6,6 +6,10 @@ import {
     Button,
     Carousel,
 } from 'antd';
+import {
+    BrowserRouter as Router,
+    NavLink,
+} from 'react-router-dom';
 import '../css/antd.css';
 import './home.css';
 import axios from 'axios';
@@ -15,20 +19,20 @@ class Home extends Component {
         this.state = {
             templatelist_bao: [],
             templatelist_TongTou: [],
-            templatelist_Tongshen:[],
-            templatelist_Tongwei:[],
-            templatelist_MeiTou:[],
-            templatelist_MeiShen:[],
-            templatelist_MeiWei:[],
-            templatelist_SheTou:[],
-            templatelist_SheShen:[],
-            templatelist_SheWei:[],
-            templatelist_NvTou:[],
-            templatelist_NvShen:[],
-            templatelist_NvWei:[],
-            templatelist_NanTou:[],
-            templatelist_NanShen:[],
-            templatelist_NanWei:[],
+            templatelist_Tongshen: [],
+            templatelist_Tongwei: [],
+            templatelist_MeiTou: [],
+            templatelist_MeiShen: [],
+            templatelist_MeiWei: [],
+            templatelist_SheTou: [],
+            templatelist_SheShen: [],
+            templatelist_SheWei: [],
+            templatelist_NvTou: [],
+            templatelist_NvShen: [],
+            templatelist_NvWei: [],
+            templatelist_NanTou: [],
+            templatelist_NanShen: [],
+            templatelist_NanWei: [],
 
         }
     }
@@ -38,39 +42,39 @@ class Home extends Component {
             .then(function(res) {
                 console.log(res)
                 console.log(res.data.data.templatelist[17])
-                // console.log(res.data.data.templatelist[11].items[0].imgurl)
+                    // console.log(res.data.data.templatelist[11].items[0].imgurl)
                 that.setState({
                     templatelist_bao: res.data.data.templatelist[3].items,
-                    templatelist_TongTou:res.data.data.templatelist[11].items[0].imgurl,
+                    templatelist_TongTou: res.data.data.templatelist[11].items[0].imgurl,
                     templatelist_Tongshen: res.data.data.templatelist[12].items,
                     templatelist_Tongwei: res.data.data.templatelist[13].items,
-                    templatelist_MeiTou:res.data.data.templatelist[16].items[0].imgurl,
-                    templatelist_MeiShen:res.data.data.templatelist[17].items,
-                    templatelist_MeiWei:res.data.data.templatelist[18].items,
-                    templatelist_SheTou:res.data.data.templatelist[21].items[0].imgurl,
-                    templatelist_SheShen:res.data.data.templatelist[22].items,
-                    templatelist_SheWei:res.data.data.templatelist[23].items,
-                    templatelist_NvTou:res.data.data.templatelist[29].items[0].imgurl,
-                    templatelist_NvShen:res.data.data.templatelist[30].items,
-                    templatelist_NvWei:res.data.data.templatelist[31].items,
-                    templatelist_NanTou:res.data.data.templatelist[39].items[0].imgurl,
-                    templatelist_NanShen:res.data.data.templatelist[40].items,
-                    templatelist_NanWei:res.data.data.templatelist[41].items,
+                    templatelist_MeiTou: res.data.data.templatelist[16].items[0].imgurl,
+                    templatelist_MeiShen: res.data.data.templatelist[17].items,
+                    templatelist_MeiWei: res.data.data.templatelist[18].items,
+                    templatelist_SheTou: res.data.data.templatelist[21].items[0].imgurl,
+                    templatelist_SheShen: res.data.data.templatelist[22].items,
+                    templatelist_SheWei: res.data.data.templatelist[23].items,
+                    templatelist_NvTou: res.data.data.templatelist[29].items[0].imgurl,
+                    templatelist_NvShen: res.data.data.templatelist[30].items,
+                    templatelist_NvWei: res.data.data.templatelist[31].items,
+                    templatelist_NanTou: res.data.data.templatelist[39].items[0].imgurl,
+                    templatelist_NanShen: res.data.data.templatelist[40].items,
+                    templatelist_NanWei: res.data.data.templatelist[41].items,
 
                 })
             })
     }
     render() {
-        var items0 = this.state.templatelist_MeiShen['0']?this.state.templatelist_MeiShen['0']:[]
-        var items1 = this.state.templatelist_MeiShen['1']?this.state.templatelist_MeiShen['1']:[]
-        var items2 = this.state.templatelist_MeiShen['2']?this.state.templatelist_MeiShen['2']:[]
+        var items0 = this.state.templatelist_MeiShen['0'] ? this.state.templatelist_MeiShen['0'] : []
+        var items1 = this.state.templatelist_MeiShen['1'] ? this.state.templatelist_MeiShen['1'] : []
+        var items2 = this.state.templatelist_MeiShen['2'] ? this.state.templatelist_MeiShen['2'] : []
         console.log(this.state.templatelist_MeiShen)
         return (
             <div>
                 <header>
                     <img src="https://r.ytrss.com/mobile/img/newlogo.png"/>
                     <div className="sea-txt">
-                        <input type="text" placeholder="搜索商品or品牌" id="txtKeyword"/>
+                        <NavLink to="/input"><input type="text" placeholder="搜索商品or品牌" id="txtKeyword"/></NavLink>
                         <span id="btnSearch">
                             <Icon type="search" style={{paddingLeft:'8px'}}/>
                         </span>

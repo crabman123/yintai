@@ -22,6 +22,7 @@ import FenLei from './fenlei';
 import QianXian from './qianxian';
 import Car from './car';
 import My from './my';
+import Input from './input';
 import './css/index.css'
 const App = () => (
   <Router>
@@ -36,12 +37,13 @@ const App = () => (
 
       <hr/>
       <Switch>
-      <Redirect exact from="/" to="/home" />
-      <Route path="/home" component={Home}/>
-      <Route path="/fenlei" component={FenLei}/>
-      <Route path="/qianxian" component={QianXian}/>
-      <Route path="/car" component={Car}/>
-      <Route path="/my" component={My}/>
+        <Redirect exact from="/" to="/home" />
+        <Route path="/home" component={Home}/>
+        <Route path="/fenlei" component={FenLei}/>
+        <Route path="/qianxian" component={QianXian}/>
+        <Route path="/car" component={Car}/>
+        <Route path="/my" component={My}/>
+        <Route path="/input" component={Input}/>
       </Switch>
     </div>
   </Router>
