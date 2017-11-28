@@ -19,11 +19,11 @@
     "eject": "react-scripts eject"
   },
   "proxy": {
-    "/v4": {
-      "target": "https://m.maizuo.com",
+    "/Services": {
+      "target": "https://m.yintai.com/",
       "changeOrigin": true,
       "pathRewrite": {
-        "^/v4": "/v4"
+        "^/Services": "/Services"
       },
       "ws": true
     }

@@ -1,0 +1,184 @@
+body,html{
+    width: 100%;
+}
+header{
+    height: 0.55rem
+}
+header img{
+    width: 0.75rem;
+    float: left;
+    margin-top: 0.08rem;
+}
+header .sea-txt{
+    position: absolute;
+    width: 2.61rem;
+    height: 0.42rem;
+    left: 0.7rem;
+    top:0.08rem;
+    border: 0.01rem solid #ccc;
+    line-height: 0.42rem;
+    border-radius: 0.05rem;
+
+}
+header .sea-txt input{
+    height: 0.30rem;
+    width: 2.43rem;
+    padding: 0.12rem; 
+    line-height:0.55rem;
+    border-radius: 0.05rem;
+    border: 0;
+}
+header .sea-txt #btnSearch{
+    position: relative;
+    right: -2.20rem;
+    top: -0.42rem;
+    font-size: 0.23rem;
+    border-left: 0.01rem solid #ccc;
+    padding-right: 20px;
+}
+header .user{
+    float: right;
+    font-size: 0.38rem;
+    color: #666;
+}
+.lun{
+    width: 100%;
+}
+.ant-carousel .slick-slide {
+  text-align: center;
+  width: 100%;
+  height: 1.52rem;
+  background: #364d79;
+  overflow: hidden;
+}
+
+.ant-carousel .slick-slide img {
+  width: 100%;
+}
+
+.slick-list{
+    width: 100%;
+}
+
+div .lun_list{
+    text-align: center;
+    overflow: hidden;
+}
+div .lun_list li{
+    float: left;  
+    width: 20%;
+}
+div .lun_list img{
+    width: 100%
+}
+div .lun_list span{
+    font-size: 0.14rem;
+    line-height: 0.2rem;
+    margin-top: 0.05rem;
+    margin-bottom: 0.03rem;
+    display: block;
+}
+.baokuan{
+    height: 1.9rem; 
+    overflow-y: hidden;
+}
+.baokuan div{
+  float: left;
+  width: 20% ;
+
+  height: 1.9rem;
+}
+.baokuan img{
+    width: 100%;
+    border: 1px solid #ccc; 
+    margin-right: 3px;
+}
+.baokuan span{
+    line-height: 0px;
+    font-size: 0.12rem;
+    color: #666;
+    text-align: center;
+}
+.mall{
+    width: 100%;
+    height: 0.82rem;
+}
+.mall img{
+    width: 100%;
+}
+.Shop_Tong{
+    height: 3rem;
+    overflow: hidden;
+}
+.Shop_Tong div:nth-of-type(1){
+    width: 1.8rem;
+    height: 1.77rem;
+    float: left;
+}
+.Shop_Tong div:nth-of-type(1) img{
+    width: 100%;
+}
+.Shop_Tong div:nth-of-type(2){
+    width: 1.86rem;
+    float: right;
+}
+.Shop_Tong div:nth-of-type(2) img{
+    width: 100%;
+}
+.Shop_Tong div:nth-of-type(3){
+    width: 1.86rem;
+    float: right;
+}
+.Shop_Tong div:nth-of-type(3) img{
+    width: 100%;
+}
+.Shop_Tong div:nth-of-type(4){
+    width: 33.33%;
+    float: left;
+}
+.Shop_Tong div:nth-of-type(4) img{
+    width: 100%;
+}
+.Shop_Tong div:nth-of-type(5){
+    width: 33.33%;
+    float: left;
+}
+.Shop_Tong div:nth-of-type(5) img{
+    width: 100%;
+}
+.Shop_Tong div:nth-of-type(6){
+    width: 33.33%;
+    float: left;
+}
+.Shop_Tong div:nth-of-type(6) img{
+    width: 100%;
+}
+.Shop_Mei{
+    width: 100%;
+}
+.Shop_MeiQ{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.Shop_MeiQ img{
+    width: 100%;
+}
+.Shop_Mei .Shop_MeiS{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.Shop_Mei .Shop_MeiB{
+    flex: 1;
+}
+.Shop_Mei .Shop_Mei1{
+    width: 100%;
+    height: 1.16rem;
+    display: flex;
+    justify-content: space-around;
+}
+.Shop_Mei .Shop_Mei1 img{
+    width: 100%;
+}

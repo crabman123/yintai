@@ -10,19 +10,20 @@ body {
 .list {
     width: 100%;
     position: fixed;
-    bottom: 0.05rem;
-    height: 0.54rem;
+    bottom: 0.0rem;
+    height: 54px;
     font-size:0.24rem ;
     line-height: 0.50rem;
     text-align: center;
     color: #666;
+    background: white;
 }
 .list li{
     width: 20%;
     float: left;
 }
 .list span{
-    font-size:0.14rem; 
+    font-size:0.13rem; 
     display: block;
     line-height: 0rem;
 }
