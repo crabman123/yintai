@@ -19,12 +19,10 @@
     "eject": "react-scripts eject"
   },
   "proxy": {
-    "/v4": {
-      "target": "https://m.maizuo.com",
+    "/api": {
+      "target": "http://localhost:8080",
       "changeOrigin": true,
-      "pathRewrite": {
-        "^/v4": "/v4"
-      },
+      "pathRewrite": {"^/api": "/api"},
       "ws": true
     }
   },
