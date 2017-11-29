@@ -2,7 +2,6 @@ import React, {
     Component
 } from 'react'
 
-
 // 遮罩组件
 class PageMask extends Component {
     render() {

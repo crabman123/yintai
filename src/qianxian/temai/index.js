@@ -1,6 +1,9 @@
 import React, {
     Component
-} from 'react'
+} from 'react';
+import {
+    NavLink,
+} from 'react-router-dom';
 import PageMask from '../PageMask.js'
 import axios from 'axios';
 class TeMai extends Component {
@@ -31,6 +34,13 @@ class TeMai extends Component {
         }
         return (
             <div>
+      <ul className="list1">
+        <li><NavLink activeClassName="active1" to="/qianxian/tuijian"><span>推荐</span></NavLink></li>
+        <li><NavLink activeClassName="active1" to="/qianxian/zuixin"><span>最新</span></NavLink></li>
+        <li><NavLink activeClassName="active1" to="/qianxian/temai"><span>特卖爆推</span></NavLink></li>
+        <li><NavLink activeClassName="active1" to="/qianxian/daoji"><span>倒计时</span></NavLink></li>
+        <li><NavLink activeClassName="active1" to="/qianxian/yugao"><span>预告</span></NavLink></li>
+      </ul>
             {
                 this.state.activitylist.map((item,index)=>{
                     return(

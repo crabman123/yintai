@@ -3,6 +3,9 @@ import React, {
 } from 'react'
 import axios from 'axios';
 import '../qiancss/qianxian.css';
+import {
+    NavLink,
+} from 'react-router-dom';
 import PageMask from '../PageMask.js'
 class TuiJian extends Component {
     constructor() {
@@ -32,13 +35,20 @@ class TuiJian extends Component {
         }
         return (
             <div>
+      <ul className="list1">
+        <li><NavLink activeClassName="active1" to="/qianxian/tuijian"><span>推荐</span></NavLink></li>
+        <li><NavLink activeClassName="active1" to="/qianxian/zuixin"><span>最新</span></NavLink></li>
+        <li><NavLink activeClassName="active1" to="/qianxian/temai"><span>特卖爆推</span></NavLink></li>
+        <li><NavLink activeClassName="active1" to="/qianxian/daoji"><span>倒计时</span></NavLink></li>
+        <li><NavLink activeClassName="active1" to="/qianxian/yugao"><span>预告</span></NavLink></li>
+      </ul>
             {
                 this.state.activitylist.map((item,index)=>{
                     return(
                         <div key={index} className='box' >
                             <div className='tuijian'>
                                 <span>{item.discount}</span>
-                                <img src={item.imgurl}/>
+                                <NavLink to='/qianxian/xiangqing'><img src={item.imgurl}/></NavLink>
                                 <div style={{paddingBottom:'10px'}}>
                                 <p>{item.title}</p>
                                 <p className='day'>剩余<span className='day_time'>{this.time(item.leftsecond)}</span>天</p>  
