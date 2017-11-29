@@ -1,0 +1,232 @@
+#fenlei{
+	height: 100%;
+	font-size: 0.16rem;
+	width: 100%;
+	::-webkit-scrollbar{width:0px;}
+}
+#fenlei  .fenlei_header{
+	width:100%;
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid #ccc;
+	display: flex;
+	justify-content: space-between;
+}
+
+#fenlei  .fenlei_header :nth-child(1){
+	margin-left: 5px;
+	font-size: 20px;
+}
+
+#fenlei  .fenlei_header :nth-child(3){
+	margin-right: 10px;
+	font-size: 20px;
+}
+#fenlei  .fenlei_main{
+	width: 100%;
+
+}
+#fenlei  .fenlei_main #opc{
+	position: fixed;
+	width: 100%;
+	height: 6.25rem;
+	background: #333;
+	opacity: .8;
+	z-index: 99;
+}
+.show{
+	display: block;
+}
+.hide{
+	display: none;
+}
+#fenlei  .fenlei_main #opc ul {
+	background: #fff;
+	position: fixed;
+	right: 0;
+}
+#fenlei  .fenlei_main #opc ul li{
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid #ccc;
+	margin:0 5px 0 5px;
+	
+}
+
+#fenlei  .fenlei_main #opc ul li span:nth-child(1){
+	display: inline-block;
+	width: 20%;
+	text-align: center;
+}
+#fenlei  .fenlei_main #opc ul li span:nth-child(2){
+	display: inline-block;
+	width: 70%;
+	text-align: center;
+}
+
+#fenlei  .fenlei_main #main_search{
+	width: 100%;
+	text-align: center;
+	height: 64px;
+	border-bottom: 1px solid #ccc;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#fenlei  .fenlei_main #main_search div{
+	height: 42px;
+	width: 90%;
+	border: 1px solid #ccc;
+	display: flex;
+	align-items: center;
+}
+
+#fenlei  .fenlei_main #main_search div input{
+	height: 30px;
+	width:85% ;
+	border: none;
+	outline: none;
+}
+#fenlei  .fenlei_main #main_search div span{
+	display: inline-block;
+	height: 30px;
+	width:15% ;
+	border-left: 1px solid #ccc;
+	font-size: 18px;
+}
+
+
+#fenlei  .fenlei_main #main_list{
+	height: 5.6rem;
+	width: 0.94rem;
+	overflow-y: auto;
+	float: left;
+}
+
+#fenlei  .fenlei_main #main_list>ul {
+	width: 0.94rem;
+	height: 5.6rem;
+	background:#f5f5f5;
+	color: #333;
+}
+
+#fenlei  .fenlei_main #main_list .out_ul>li{
+	width: 100%;
+	height: 55px;
+	line-height: 55px;
+	background:#ccc ;
+	color: #333;
+	text-align: center;
+}
+#fenlei  .fenlei_main #main_list .out_ul .out_li1{
+	background: #fff;
+}
+#fenlei  .fenlei_main .right {
+	margin-leftleft: 0.94rem;
+	width: 2.81rem;
+	height: 5.6rem;
+	float: right;
+	overflow-y: auto;
+}
+.right .top .top_header{
+	margin-top: 15px;
+	width: 100%;
+	line-height: 35px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.right .top .top_header span{
+	width: 30%;
+	height: 1px;
+	background: #999;
+	display: inline-block;
+}
+
+.right .top .top_content{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.right .top .lists{
+	width: 33%;
+	height: 33%;
+	margin-top: 10px;
+	margin-bottom: 0.33rem;
+	text-align: center;
+}
+.right .top .lists img{
+	width: 70%;
+	height: 80%;
+}
+.right .center .center_header{
+	width: 100%;
+	line-height: 35px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.right .center .center_header span{
+	width: 30%;
+	height: 1px;
+	background: #999;
+	display: inline-block;
+}
+
+.right .center .center_content{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.right .center .center_content .lists_center{
+	width: 30%;
+	height: 0.5rem;
+	margin-top: 0.25rem;
+	border: 2px solid #ccc;
+
+}
+.right .center .center_content .lists_center img{
+	width: 100%;
+	height: 100%;
+
+}
+.right .bottom .bottom_header{
+	width: 100%;
+	line-height: 35px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.right .bottom .bottom_header span{
+	width: 30%;
+	height: 1px;
+	background: #999;
+	display: inline-block;
+}
+
+.right .bottom .bottom_content{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.right .bottom .bottom_content .lists_bottom{
+	width: 30%;
+	height: 0.5rem;
+	line-height: 0.5rem;
+	margin-top: 0.25rem;
+	text-align: center;
+}
+
