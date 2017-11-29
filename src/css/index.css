@@ -10,13 +10,14 @@ body {
 .list {
     width: 100%;
     position: fixed;
-    bottom: 0.0rem;
+    bottom: 0;
     height: 58px;
     font-size:0.22rem ;
     line-height: 0.50rem;
     text-align: center;
     color: #666;
     background: white;
+    z-index: 9999;
 }
 .list li{
     width: 20%;
