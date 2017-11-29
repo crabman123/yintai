@@ -1,11 +1,49 @@
 import React, {
     Component
 } from 'react'
-
+import axios from 'axios';
+import '../qiancss/qianxian.css';
 class YuGao extends Component {
+    constructor() {
+        super()
+        this.state = {
+            activitylist: []
+        }
+    }
+    componentDidMount() {
+        var that = this
+        axios.get('/Services/Proxy.ashx?r=0.6854048756481617&type=2&page_index=1&displaycount=30&methodName=products.limitbuy_1.2.0&method=products.limitbuy&ver=2.1')
+            .then(function(res) {
+                console.log(res)
+                console.log(res.data.data.activityinfo[0].activitylist)
+                that.setState({
+                    activitylist: res.data.data.activityinfo[0].activitylist,
+                })
+            })
+    }
+    time(leftsecond) {
+        return Math.floor((leftsecond) / 3600)
+    }
     render() {
         return (
-            <h2>这是我的yugao页</h2>
+            <div>
+            {
+                this.state.activitylist.map((item,index)=>{
+                    return(
+                        <div key={index} className='box' >
+                            <div className='tuijian'>
+                                <span>{item.discount}</span>
+                                <img src={item.imgurl}/>
+                                <div style={{paddingBottom:'10px'}}>
+                                <p>{item.title}</p>
+                                <p className='day'>还有<span className='day_time'>{this.time(item.leftsecond)}</span>小时</p>  
+                                </div>
+                            </div>
+                        </div>
+                        )
+                })
+            }
+            </div>
         )
     }
 }
