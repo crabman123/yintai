@@ -17,6 +17,12 @@ import TeMai from './temai';
 import DaoJi from './daoji';
 import YuGao from './yugao';
 import './qiancss/index.css'
+// 遮罩组件
+class PageMask extends Component {
+  render() {
+    return <div className="mask"><p>正在加载...</p></div>
+  }
+};
 const Qianxian = () => (
   <Router>
     <div>

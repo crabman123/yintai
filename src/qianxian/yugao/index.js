@@ -2,6 +2,7 @@ import React, {
     Component
 } from 'react'
 import axios from 'axios';
+import PageMask from '../PageMask.js';
 import '../qiancss/qianxian.css';
 class YuGao extends Component {
     constructor() {
@@ -25,6 +26,10 @@ class YuGao extends Component {
         return Math.floor((leftsecond) / 3600)
     }
     render() {
+        if (this.state.activitylist.length == 0) {
+            //代表还没有完成 数据交互,显示一个蒙版
+            return <PageMask />
+        }
         return (
             <div>
             {

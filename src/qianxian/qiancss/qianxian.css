@@ -58,4 +58,5 @@
 .TMbox .TMimg img{
     width: 100%;
 }
-
+.mask{position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color: gray;opacity: 0.5;z-index: 999;}
+.mask p{width: 20%;height: 30px;line-height: 3px;margin: 0 auto;margin-top: 30%;opacity: 1.0;}
