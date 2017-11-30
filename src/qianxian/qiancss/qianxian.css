@@ -60,3 +60,16 @@
 }
 .mask{position: fixed;top: 0;left: 0;width: 100%;background: rgba(0,0,0,.5); height: 100%;z-index: 999;}
 .mask p{color:black;width: 20%;height: 30px;line-height: 3px;margin: 0 auto;margin-top: 30%;opacity: 1.0;}
+.product_car{
+    width: 1.42rem;
+    height: 0.64rem;
+    background: #f60;
+    color: white;
+    font-size: 0.24rem;
+    line-height: 0.64rem;
+    position: fixed;
+    bottom: 60px;
+    right: 5px;
+    border-radius: 5px 5px 5px 5px;
+    text-align: center;
+}

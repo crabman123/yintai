@@ -18,10 +18,8 @@ class TuiJian extends Component {
         var that = this
         axios.get('/Services/Proxy.ashx?r=0.7560145697186798&type=5&page_index=1&displaycount=30&methodName=products.limitbuy_1.2.0&method=products.limitbuy&ver=2.1')
             .then(function(res) {
-                console.log(res)
-                console.log(res.data.data.activityinfo[0].activitylist)
                 that.setState({
-                    activitylist: res.data.data.activityinfo[0].activitylist,
+                    activitylist: res.data.data.activityinfo[0].activitylist
                 })
             })
     }
@@ -48,7 +46,7 @@ class TuiJian extends Component {
                         <div key={index} className='box' >
                             <div className='tuijian'>
                                 <span>{item.discount}</span>
-                                <NavLink to='/qianxian/xiangqing'><img src={item.imgurl}/></NavLink>
+                                <NavLink to={"/qianxian/xiangqing/"+item.id+"/" + item.name}><img src={item.imgurl}/></NavLink>
                                 <div style={{paddingBottom:'10px'}}>
                                 <p>{item.title}</p>
                                 <p className='day'>剩余<span className='day_time'>{this.time(item.leftsecond)}</span>天</p>  
