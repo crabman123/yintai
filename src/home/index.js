@@ -12,63 +12,69 @@ import {
 } from 'react-router-dom';
 import '../css/antd.css';
 import './home.css';
+import {
+    connect
+} from 'react-redux';
 import axios from 'axios';
-class Home extends Component {
-    constructor() {
-        super()
-        this.state = {
-            templatelist_bao: [],
-            templatelist_TongTou: [],
-            templatelist_Tongshen: [],
-            templatelist_Tongwei: [],
-            templatelist_MeiTou: [],
-            templatelist_MeiShen: [],
-            templatelist_MeiWei: [],
-            templatelist_SheTou: [],
-            templatelist_SheShen: [],
-            templatelist_SheWei: [],
-            templatelist_NvTou: [],
-            templatelist_NvShen: [],
-            templatelist_NvWei: [],
-            templatelist_NanTou: [],
-            templatelist_NanShen: [],
-            templatelist_NanWei: [],
-
+class HomeUI extends Component {
+    constructor(props) {
+            super(props);
+            this.props.getData();
         }
-    }
-    componentDidMount() {
-        var that = this
-        axios.get('/Services/Proxy.ashx?r=20171127209&os=HTML5&client_v=1.0.0&pageid=104001&previewtime=0&methodName=products.template.getpage_1.0.0&method=products.template.getpage&apptype=10&ver=1.0.0&pageindex=1')
-            .then(function(res) {
-                console.log(res)
-                console.log(res.data.data.templatelist[17])
-                    // console.log(res.data.data.templatelist[11].items[0].imgurl)
-                that.setState({
-                    templatelist_bao: res.data.data.templatelist[3].items,
-                    templatelist_TongTou: res.data.data.templatelist[11].items[0].imgurl,
-                    templatelist_Tongshen: res.data.data.templatelist[12].items,
-                    templatelist_Tongwei: res.data.data.templatelist[13].items,
-                    templatelist_MeiTou: res.data.data.templatelist[16].items[0].imgurl,
-                    templatelist_MeiShen: res.data.data.templatelist[17].items,
-                    templatelist_MeiWei: res.data.data.templatelist[18].items,
-                    templatelist_SheTou: res.data.data.templatelist[21].items[0].imgurl,
-                    templatelist_SheShen: res.data.data.templatelist[22].items,
-                    templatelist_SheWei: res.data.data.templatelist[23].items,
-                    templatelist_NvTou: res.data.data.templatelist[29].items[0].imgurl,
-                    templatelist_NvShen: res.data.data.templatelist[30].items,
-                    templatelist_NvWei: res.data.data.templatelist[31].items,
-                    templatelist_NanTou: res.data.data.templatelist[39].items[0].imgurl,
-                    templatelist_NanShen: res.data.data.templatelist[40].items,
-                    templatelist_NanWei: res.data.data.templatelist[41].items,
+        // constructor() {
+        //     super()
+        //     this.state = {
+        //         templatelist_bao: [],
+        //         templatelist_TongTou: [],
+        //         templatelist_Tongshen: [],
+        //         templatelist_Tongwei: [],
+        //         templatelist_MeiTou: [],
+        //         templatelist_MeiShen: [],
+        //         templatelist_MeiWei: [],
+        //         templatelist_SheTou: [],
+        //         templatelist_SheShen: [],
+        //         templatelist_SheWei: [],
+        //         templatelist_NvTou: [],
+        //         templatelist_NvShen: [],
+        //         templatelist_NvWei: [],
+        //         templatelist_NanTou: [],
+        //         templatelist_NanShen: [],
+        //         templatelist_NanWei: [],
+        //     }
+        // }
+        // componentDidMount() {
+        //     var that = this
+        //     axios.get('/Services/Proxy.ashx?r=20171127209&os=HTML5&client_v=1.0.0&pageid=104001&previewtime=0&methodName=products.template.getpage_1.0.0&method=products.template.getpage&apptype=10&ver=1.0.0&pageindex=1')
+        //         .then(function(res) {
+        //             console.log(res)
+        //             console.log(res.data.data.templatelist[17])
+        //                 // console.log(res.data.data.templatelist[11].items[0].imgurl)
+        //             that.setState({
+        //                 templatelist_bao: res.data.data.templatelist[3].items,
+        //                 templatelist_TongTou: res.data.data.
+        //                 templatelist_Tongshen: res.data.data.templatelist[12].items,
+        //                 templatelist_Tongwei: res.data.data.templatelist[13].items,
+        //                 templatelist_MeiTou: res.data.data.templatelist[16].items[0].imgurl,
+        //                 templatelist_MeiShen: res.data.data.templatelist[17].items,
+        //                 templatelist_MeiWei: res.data.data.templatelist[18].items,
+        //                 templatelist_SheTou: res.data.data.templatelist[21].items[0].imgurl,
+        //                 templatelist_SheShen: res.data.data.templatelist[22].items,
+        //                 templatelist_SheWei: res.data.data.templatelist[23].items,
+        //                 templatelist_NvTou: res.data.data.templatelist[29].items[0].imgurl,
+        //                 templatelist_NvShen: res.data.data.templatelist[30].items,
+        //                 templatelist_NvWei: res.data.data.templatelist[31].items,
+        //                 templatelist_NanTou: res.data.data.templatelist[39].items[0].imgurl,
+        //                 templatelist_NanShen: res.data.data.templatelist[40].items,
+        //                 templatelist_NanWei: res.data.data.templatelist[41].items,
 
-                })
-            })
-    }
+    //             })
+    //         })
+    // }
     render() {
-        var items0 = this.state.templatelist_MeiShen['0'] ? this.state.templatelist_MeiShen['0'] : []
-        var items1 = this.state.templatelist_MeiShen['1'] ? this.state.templatelist_MeiShen['1'] : []
-        var items2 = this.state.templatelist_MeiShen['2'] ? this.state.templatelist_MeiShen['2'] : []
-        console.log(this.state.templatelist_MeiShen)
+        var temp0 = this.props.Homelist[0] ? this.props.Homelist[0] : [];
+        // var temp1 = temp0[3] ? temp0[3] : [];
+        // var temp2 = temp1.items ? temp1.items : [];
+        console.log(this.props)
         return (
             <div>
                 <header>
@@ -117,113 +123,41 @@ class Home extends Component {
                 </ul>
 
                 <div className="baokuan">
-                        {
-                            this.state.templatelist_bao.map(function(item, index) {
-                                return (<div key={index}>
-                                            <img src={item.imgurl}/>
-                                            <span>{item.extra.productdetail.name}</span>
-                                        </div>)
-                            })  
-                        }
+                {
+                    temp0.map(function(item, index) {
+                        return (<div key={index}>
+                                    <img src={item.imgurl}/>
+                                    <span>{item.extra.productdetail.name}</span>
+                                </div>)
+                    })  
+                }
                 </div>
                 <div className="mall">
                     <img src="https://yrs.yintai.com/rs/img/AppCMS/images/6344048d-146b-4e77-80b3-3d1cb1ba1dd9.jpg"></img>
-                </div>
-                
-                <div className="Shop_Tong" >
-                   <img src={this.state.templatelist_TongTou} style={{width:'100%'}}/>                
-                    {
-                        this.state.templatelist_Tongshen.map(function(item, index) {
-                            return (<div key={index}>
-                                 <img src={item.imgurl}/>
-                                </div>)
-                            })  
-                    },
-                    {
-                        this.state.templatelist_Tongwei.map(function(item, index) {
-                            return (<div key={index}>
-                                 <img src={item.imgurl}/>
-                                </div>)
-                            })  
-                    }
-                </div>
-                <img src={this.state.templatelist_MeiTou} style={{width:'100%'}}/>
-                <div className="Shop_Mei" >                   
-                   <div className='Shop_MeiQ'>                
-                        <div className='Shop_MeiS'>
-                            <img src={items0.imgurl}/>
-                            <img src={items1.imgurl}/>
-                        </div>
-                        <div className='Shop_MeiB'>
-                            <img src={items2.imgurl}/>
-                        </div>
-                    </div>
-                    <div className="Shop_Mei1">
-                    {
-                        this.state.templatelist_MeiWei.map(function(item, index) {
-                            return (
-                                <div key={index}>
-                                 <img src={item.imgurl}/>
-                                </div>
-                                )
-                            })  
-                    }
-                    </div>
-                </div>
-                <div className="Shop_Tong" >
-                   <img src={this.state.templatelist_SheTou} style={{width:'100%'}}/>                
-                    {
-                        this.state.templatelist_SheShen.map(function(item, index) {
-                            return (<div key={index}>
-                                 <img src={item.imgurl}/>
-                                </div>)
-                            })  
-                    },
-                    {
-                        this.state.templatelist_SheWei.map(function(item, index) {
-                            return (<div key={index}>
-                                 <img src={item.imgurl}/>
-                                </div>)
-                            })  
-                    }
-                </div>
-                <div className="Shop_Tong" >
-                   <img src={this.state.templatelist_NvTou} style={{width:'100%'}}/>                
-                    {
-                        this.state.templatelist_NvShen.map(function(item, index) {
-                            return (<div key={index}>
-                                 <img src={item.imgurl}/>
-                                </div>)
-                            })  
-                    },
-                    {
-                        this.state.templatelist_NvWei.map(function(item, index) {
-                            return (<div key={index}>
-                                 <img src={item.imgurl}/>
-                                </div>)
-                            })  
-                    }
-                </div>
-                <div className="Shop_Tong" >
-                   <img src={this.state.templatelist_NanTou} style={{width:'100%'}}/>                
-                    {
-                        this.state.templatelist_NanShen.map(function(item, index) {
-                            return (<div key={index}>
-                                 <img src={item.imgurl}/>
-                                </div>)
-                            })  
-                    },
-                    {
-                        this.state.templatelist_NanWei.map(function(item, index) {
-                            return (<div key={index}>
-                                 <img src={item.imgurl}/>
-                                </div>)
-                            })  
-                    }
                 </div>
         </div>
         )
     }
 }
+const mapStateToProps = (state) => {
+    return {
+        Homelist: state.Homelist
+    }
+}
 
+const mapDispatchToProps = (dispatch) => {
+        return {
+            getData() {
+                axios.get('/Services/Proxy.ashx?r=20171127209&os=HTML5&client_v=1.0.0&pageid=104001&previewtime=0&methodName=products.template.getpage_1.0.0&method=products.template.getpage&apptype=10&ver=1.0.0&pageindex=1')
+                    .then(function(res) {
+                        dispatch({
+                            type: "Home_Add",
+                            payload: res.data.data.templatelist[3].items,
+                        })
+                    })
+            }
+        }
+    }
+    // 生成容器组件
+const Home = connect(mapStateToProps, mapDispatchToProps)(HomeUI);
 export default Home
